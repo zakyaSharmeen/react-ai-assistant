@@ -88,6 +88,10 @@ box-shadow: 2px 2px 10px black;
     align-items: start;
     color: var(--color);
 }
+.img{
+    height: 50px;
+    width: 50px;
+}
 .aibox{
     display: flex;
     gap:20px;

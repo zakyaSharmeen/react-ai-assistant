@@ -4,28 +4,58 @@ import Darkmode from "../Darkmode/Darkmode";
 import { LuSendHorizontal } from "react-icons/lu";
 import { dataContext } from "../../context/UserContex";
 // import user from "../../assets/user.png";
+import user from "../../assets/user.png";
+import ai from "../../assets/ai.png";
 // import ai from "../../assets/ai.png";
 
 function ChatSection() {
-  const { sent, response } = useContext(dataContext);
+  const {
+    sent,
+    response,
+    setShowResult,
+    input,
+    setInput,
+    loading,
+    setLoading,
+    showResult,
+    setResultData,
+    resultData,
+    recentPrompt,
+    setRecentPrompt,
+  } = useContext(dataContext);
 
   return (
     <div className="chatsection">
       <div className="topsection">
-        <div className="headings">
-          <span>HELLO AYUSH,</span>
-          <span>I'm Your Own Assistant</span>
-          <span>What can I help you...?</span>
-        </div>
+        {!showResult ? (
+          <div className="headings">
+            <span>HELLO AYUSH,</span>
+            <span>I'm Your Own Assistant</span>
+            <span>What can I help you...?</span>
+          </div>
+        ) : (
+          <div className="result">
+            <div className="userbox">
+              <img src={user} className="img" />
+              <p>{recentPrompt}</p>
+            </div>
+            <div className="aibox">
+              <img src={ai} className="img" />
+              <p>{resultData}</p>
+            </div>
+          </div>
+        )}
       </div>
       <div className="bottomsection">
-        <input type="text" placeholder="Enter a prompt" />
-        <button
-          id="sentbtn"
-          onClick={() => sent("good eveing maouni, i hope u r good")}>
+        <input
+          type="text"
+          placeholder="Enter a prompt"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button id="sentbtn" onClick={() => sent(input)}>
           <LuSendHorizontal />
         </button>
-        {/* <p>{response}</p> */}
 
         <Darkmode />
       </div>
