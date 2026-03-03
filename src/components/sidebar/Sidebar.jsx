@@ -13,7 +13,7 @@ function Sidebar() {
     <div className="sidebar">
       <GiHamburgerMenu
         style={{
-          "background-color": "var(--background-color)",
+          backgroundColor: "var(--background-color)",
           color: "var(--color)",
         }}
         id="ham"
