@@ -11,17 +11,13 @@ import ai from "../../assets/ai.png";
 function ChatSection() {
   const {
     sent,
-    response,
-    setShowResult,
+
     input,
     setInput,
     loading,
-    setLoading,
     showResult,
-    setResultData,
     resultData,
     recentPrompt,
-    setRecentPrompt,
   } = useContext(dataContext);
 
   return (
@@ -41,7 +37,15 @@ function ChatSection() {
             </div>
             <div className="aibox">
               <img src={ai} className="img" />
-              <p>{resultData}</p>
+              {loading ? (
+                <div className="loader">
+                  <hr />
+                  <hr />
+                  <hr />
+                </div>
+              ) : (
+                <p>{resultData}</p>
+              )}
             </div>
           </div>
         )}
@@ -53,9 +57,11 @@ function ChatSection() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button id="sentbtn" onClick={() => sent(input)}>
-          <LuSendHorizontal />
-        </button>
+        {input ? (
+          <button id="sentbtn" onClick={() => sent(input)}>
+            <LuSendHorizontal />
+          </button>
+        ) : null}
 
         <Darkmode />
       </div>
