@@ -33,14 +33,14 @@
 .headings span:nth-child(1){
     font-size: 4em;
     font-weight: 600;
-    background:linear-gradient(to right,rgb(222, 19, 101),rgb(89, 190, 215),rgb(194, 193, 193));
+    background:linear-gradient(to right,rgb(207, 68, 123),rgb(194, 215, 89),rgb(194, 193, 193));
     background-clip: text;
     color: transparent;
 }
 .headings span:nth-child(2){
     font-size: 2.9em;
     font-weight: 600;
-    background:linear-gradient(to right,rgb(19, 198, 222),rgb(212, 31, 107),rgb(194, 193, 193));
+    background:linear-gradient(to right,rgb(195, 222, 43),rgb(212, 31, 107),rgb(194, 193, 193));
     background-clip: text;
     color: transparent;
 }
