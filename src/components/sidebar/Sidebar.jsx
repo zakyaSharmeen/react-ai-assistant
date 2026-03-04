@@ -11,17 +11,13 @@ function Sidebar() {
     console.log("Updated extend:", extend);
   }, [extend]);
 
-  const {
-    newChat,
-    setRecentPrompt,
-
-    previousPrompt,
-  } = useContext(dataContext);
+  const { newChat, setRecentPrompt, sent, previousPrompt } =
+    useContext(dataContext);
 
   async function loadPrevPrompt(item) {
     // sent(item);
     // setInput(item); // ✅ sets input
-    // sent(item, true);
+    sent(item, true);
     setRecentPrompt(item);
   }
   return (
