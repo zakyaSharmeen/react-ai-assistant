@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "./ChatSection.css";
-import Darkmode from "../Darkmode/Darkmode";
+import Darkmode from "../Darkmode/Darkmode.jsx";
 import { LuSendHorizontal } from "react-icons/lu";
-import { dataContext } from "../../context/UserContex";
+import { dataContext } from "../../context/UserContex.jsx";
 // import user from "../../assets/user.png";
 import user from "../../assets/user.png";
 import ai from "../../assets/ai.png";

@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaPlus } from "react-icons/fa6";
 import { FaRegMessage } from "react-icons/fa6";
 import "./Sidebar.css";
-import { dataContext } from "../../context/UserContex";
+import { dataContext } from "../../context/UserContex.jsx";
 function Sidebar() {
   let [extend, setExtend] = useState(false);
 

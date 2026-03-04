@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { run } from "../openRouter";
+import { run } from "../openRouter.js";
 
 export const dataContext = createContext();
 
