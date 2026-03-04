@@ -3,7 +3,7 @@ import { LuMoon } from "react-icons/lu";
 import { MdOutlineWbSunny } from "react-icons/md";
 import "./Darkmode.css";
 
-function Darkmode() {
+export function Darkmode() {
   let [mode, setMode] = useState("darkmode");
 
   function toggleMode() {
@@ -31,8 +31,6 @@ function Darkmode() {
     </div>
   );
 }
-
-export default Darkmode;
 
 // import React, { useEffect, useState } from "react";
 // import { MdOutlineWbSunny } from "react-icons/md";

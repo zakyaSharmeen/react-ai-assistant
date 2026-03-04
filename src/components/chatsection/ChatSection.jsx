@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
 import "./ChatSection.css";
-import Darkmode from "../Darkmode/Darkmode.jsx";
+import { Darkmode } from "../darkmode/Darkmode.jsx";
 import { LuSendHorizontal } from "react-icons/lu";
 import { dataContext } from "../../context/UserContex.jsx";
-// import user from "../../assets/user.png";
 import user from "../../assets/user.png";
 import ai from "../../assets/ai.png";
-// import ai from "../../assets/ai.png";
 
 function ChatSection() {
   const {
